@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const port = process.env.PORT || 8080;
-const host = 'localhost' || '0.0.0.0';
+const host = '0.0.0.0';
 
 //  Setting middlewares
 app.use(express.static("./public"));
