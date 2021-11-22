@@ -1,0 +1,7 @@
+a. Reset in sidebar--1 shld be a button [UPDATED]
+c. sidebar class names shld be sidebar--1, and so on, for easy iteration
+b. CloseBtn shld be only one class and iterated through a loop to close all sidebars
+
+d. MarkerProperties shld be set during the render time and using the marker data fetched.
+e. Optimal way to set marker MarkerProperties
+f. [PRIORITY] Make search sidebar buttons of category as checkboxes.

@@ -1,0 +1,155 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="main-admin-container">
+      <div class="profile-admin-container">
+        <div class="card">
+          <div class="card-header"></div>
+
+          <div class="card-body">
+            <h2 class="profile-name">Mayank Jhavre</h2>
+            <h4 class="profile-department">CSE</h4>
+            <div class="bio">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Dignissimos, aperiam.
+            </div>
+          </div>
+        </div>
+        <div class="map-redirect-control">
+          <img src="design/map(1).png" />
+          <h3>Map</h3>
+        </div>
+        <div class="logout-control">
+          <img src="design/logout.png" />
+          <h3>Logout</h3>
+        </div>
+      </div>
+      <div class="main-admin-control-container">
+        <div class="count">
+          <div class="update-count-container">
+            <div class="update-count-markers">
+              <h3>Total markers</h3>
+              <h2>50</h2>
+            </div>
+            <div class="update-count-issues">
+              <h3>Issues</h3>
+              <h2>0</h2>
+            </div>
+          </div>
+          <div class="marker-count-container">
+            <div class="marker-count">
+              <h3>Academic building</h3>
+              <h2 class="marker-academic">10</h2>
+            </div>
+            <div class="marker-count">
+              <h3>Non Academic</h3>
+              <h2 class="marker-nonacademic">10</h2>
+            </div>
+            <div class="marker-count">
+              <h3>Point of Interest</h3>
+              <h2 class="marker-poi">10</h2>
+            </div>
+            <div class="marker-count">
+              <h3>Hall of residences</h3>
+              <h2 class="marker-hor">10</h2>
+            </div>
+            <div class="marker-count">
+              <h3>Others and facilities</h3>
+              <h2 class="marker-oaf">10</h2>
+            </div>
+          </div>
+        </div>
+        <div class="admin-control-search">
+          <img src="design/magnifying-glass.png" />
+          <input
+            type="text"
+            placeholder="Search"
+            name="markerName"
+            class="admin-searchbox"
+          />
+        </div>
+        <div class="admin-control-filter">
+          <h3>Filters</h3>
+          <img src="design/filter.png" />
+        </div>
+        <div class="admin-control-markers-container">
+          <h2>Markers</h2>
+          <h3>View all</h3>
+          <div class="admin-control-markers">
+            <div class="single-marker">
+              <h5>Name of the marker</h5>
+              <div class="marker-links">
+                <a href="edit.html?id="><img src="design/edit-marker.png" /></a>
+                <button type="button" class="marker-delete-btn">
+                  <img src="design/delete.png" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="side-admin-control-container">
+        <div class="side-container">
+          <div class="side-insert-container">
+            <div class="side-insert-head">
+              <h4>Insert</h4>
+              <h5>Use the button below to redirect insert page</h5>
+            </div>
+            <button type="button" class="sidebar-insertbtn">Insert</button>
+          </div>
+          <div class="side-issue-container">
+            <div class="single-issue">
+              <h5>Issue Id</h5>
+              <p>Issue description</p>
+              <div class="issue-links">
+                <button type="button" class="issue-delete-btn">
+                  <img src="design/delete.png" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <h3>Issues</h3>
+        </div>
+      </div>
+    </div>
+    <div class="admin-control-filterbox">
+      <button type="button" class="close-filter">
+        <img src="design/close-black.png" />
+      </button>
+      <label>Category</label><br />
+      <div class="dropDown">
+        <select class="dropdownListCategory">
+          <option value="commonSearch">Common Searches</option>
+          <option value="Academic">Academic Buildings</option>
+          <option value="Non-Academic">Non-Academic Buildings</option>
+          <option value="Hall of Residence 	">Residence Halls</option>
+          <option value="Facilities">Other buildings and Facilities</option>
+          <option value="Point of Interest">Points of Interest</option>
+        </select>
+      </div>
+      <br />
+      <hr size="1" color="lightgrey" />
+      <br />
+      <label>Department</label><br />
+      <div class="dropDown">
+        <select class="dropdownListDepartment">
+          <option value="G.Admin">General Administration</option>
+          <option value="CSE">Computer Science</option>
+          <option value="ECE">Electronics and Communitcation</option>
+          <option value="ME">Mechanical</option>
+          <option value="SM">Smart Manufacturing</option>
+          <option value="Des">Design</option>
+          <option value="NS">Natural Science</option>
+        </select>
+      </div>
+    </div>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

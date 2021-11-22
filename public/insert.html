@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="edit.css" />
+    <title>Insert Marker</title>
+  </head>
+  <body>
+    <div class="edit-marker-form-container">
+      <h4>Insert Marker</h4>
+      <form
+        action="/admin/marker/insert"
+        method="POST"
+        class="edit-marker-form"
+      >
+        <div class="edit-form-control">
+          <label for="markerName">Marker Name</label>
+          <input type="text" name="markerName" class="markerName" />
+        </div>
+        <br />
+        <div class="edit-form-control">
+          <label for="markerLatitude">Marker's Latitude</label>
+          <input
+            type="number"
+            step="any"
+            name="markerLatitute"
+            class="markerLatitute"
+          />
+        </div>
+        <br />
+        <div class="edit-form-control">
+          <label for="markerLongitude">Marker's Longitude</label>
+          <input
+            type="number"
+            step="any"
+            name="markerLongitude"
+            class="markerLongitude"
+          />
+        </div>
+        <br />
+        <div class="edit-form-control">
+          <label for="markerCategory">Marker's Category</label>
+          <input
+            type="text"
+            name="markerCategory"
+            list="category"
+            placeholder="Select from list"
+            class="markerCategory"
+          />
+          <datalist id="category">
+            <option value="academic"></option>
+            <option value="non-academic"></option>
+            <option value="hall of residence"></option>
+            <option value="point of interest"></option>
+            <option value="facilities"></option>
+          </datalist>
+        </div>
+        <br />
+        <div class="edit-form-control">
+          <label for="markerDepartment">Marker's Department</label>
+          <input
+            type="text"
+            name="markerDepartment"
+            list="department"
+            placeholder="Select from list"
+            class="markerDepartment"
+          />
+          <datalist id="department">
+            <option value="All"></option>
+            <option value="CSE"></option>
+            <option value="Des"></option>
+            <option value="ECE"></option>
+            <option value="G.Admin"></option>
+            <option value="ME"></option>
+            <option value="No dept"></option>
+            <option value="NS"></option>
+            <option value="others"></option>
+          </datalist>
+        </div>
+        <br />
+        <div class="edit-form-control">
+          <label for="description">Marker's description</label>
+          <textarea class="descriptionArea" name="description"></textarea>
+        </div>
+        <br />
+        <div class="edit-form-control">
+          <label for="restriction">Restrictions on Location</label>
+          <input type="text" name="restriction" class="restriction" />
+        </div>
+      </form>
+      <button type="button" class="alternate edit-form-submitbtn">
+        Insert
+      </button>
+      <h5 class="insert-status"></h5>
+    </div>
+    <script src="insert.js"></script>
+  </body>
+</html>

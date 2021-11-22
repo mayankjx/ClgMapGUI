@@ -1,0 +1,494 @@
+@import url(https://fonts.googleapis.com/css?family=Exo+2:300,400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Exo 2", sans-serif;
+  color: #333;
+}
+
+.main-admin-container {
+  display: flex;
+}
+
+.profile-admin-container {
+  border-right: 1px solid lightgray;
+  height: 100vh;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+.main-admin-control-container {
+  height: 100vh;
+  padding: 20px;
+  flex: 2;
+  text-align: center;
+}
+
+.side-admin-control-container {
+  height: 100vh;
+  padding: 20px;
+  flex: 1;
+  text-align: center;
+}
+
+/* PROFILE CARD CSS  */
+.card {
+  position: relative;
+  top: 10px;
+  width: 315px; /* Remove for full width */
+  height: 380px; /* Remove for full width */
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+.card-header {
+  background-image: url("design/Sub\ zero\ glow01.png");
+  position: relative;
+  height: 220px;
+  background-size: cover;
+  background-position: top;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-body {
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.profile-department {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 5px;
+  color: #919191;
+}
+
+.bio {
+  font-size: 14px;
+  color: #7b7b7b;
+  font-weight: 300;
+  margin: 10px auto;
+  line-height: 20px;
+}
+
+.logout-control {
+  position: absolute;
+  bottom: 40px;
+  left: 100px;
+  padding: 10px;
+}
+
+.logout-control img {
+  height: 30px;
+}
+
+.logout-control h3 {
+  display: inline;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+
+.logout-control:hover {
+  cursor: pointer;
+}
+
+.map-redirect-control {
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  padding: 10px;
+}
+
+.map-redirect-control img {
+  height: 40px;
+}
+
+.map-redirect-control h3 {
+  display: inline;
+  padding-left: 10px;
+  position: relative;
+  top: -10px;
+}
+
+.map-redirect-control:hover {
+  cursor: pointer;
+}
+
+/* PROFILE CARD CSS END */
+
+/*  MAIN CONTROL CSS START */
+
+.count {
+  background-color: rgba(238, 232, 170, 0.4);
+  height: 220px;
+  width: 90%;
+  border-radius: 30px;
+  margin: 10px;
+  font: sans-serif;
+}
+
+.update-count-container {
+  display: flex;
+  padding: 20px;
+  padding-bottom: 10px;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.update-count-container h3 {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.update-count-container h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.update-count-markers {
+  position: absolute;
+  left: 450px;
+}
+
+.update-count-issues {
+  position: relative;
+  left: -80px;
+}
+
+.marker-count-container {
+  display: flex;
+  padding: 20px;
+  padding-top: 0px;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.marker-count {
+  padding: 10px;
+}
+
+.marker-count h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.marker-count h3 {
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* Search bar */
+.admin-control-search {
+  margin-top: 25px;
+  margin-left: 15px;
+  border: 1.7px solid lightgray;
+  border-radius: 12px;
+  width: 50%;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.admin-control-search img {
+  display: inline;
+  height: 25px;
+  position: relative;
+  top: 7px;
+}
+
+.admin-control-search input {
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  padding-left: 10px;
+  width: 80%;
+}
+
+.admin-control-search img:hover {
+  cursor: pointer;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+.admin-control-filter {
+  position: relative;
+  top: -40px;
+  left: 520px;
+  border: 1.7px solid lightgray;
+  border-radius: 12px;
+  width: 15%;
+  padding: 5px;
+}
+
+.admin-control-filter img {
+  display: inline;
+  height: 25px;
+  padding-right: 5px;
+}
+
+.admin-control-filter h3 {
+  display: inline;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 90%;
+  position: relative;
+  top: -7px;
+  margin-right: 10px;
+}
+
+.admin-control-filter:hover {
+  cursor: pointer;
+}
+
+/* Marker container */
+.admin-control-markers-container {
+  height: 320px;
+  width: 90%;
+  position: relative;
+  left: 20px;
+  overflow-y: scroll;
+}
+
+.admin-control-markers-container h2 {
+  text-align: left;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.admin-control-markers-container h3 {
+  position: relative;
+  top: -20px;
+  text-align: right;
+  right: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.admin-control-markers-container h3:hover {
+  cursor: pointer;
+}
+
+.admin-control-markers {
+  display: grid;
+  gap: 1rem;
+}
+
+.single-marker {
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  width: 92%;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  transition: box-shadow 0.4s;
+}
+
+.single-marker h5 {
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  top: 15px;
+  left: 10px;
+}
+
+.single-marker img {
+  height: 25px;
+}
+
+.marker-links {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.marker-delete-btn,
+.marker-edit-btn:hover {
+  cursor: pointer;
+}
+
+.single-marker:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* SIDE CONTAINER */
+
+.side-container {
+  position: relative;
+  margin-top: 10px;
+  height: 635px;
+  width: 90%;
+}
+
+.side-container h3 {
+  position: absolute;
+  top: 225px;
+  left: 10px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.side-insert-container {
+  position: relative;
+  height: 160px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 30px;
+  color: #fff;
+}
+
+.side-insert-head {
+  text-align: left;
+  padding: 20px;
+}
+
+.side-insert-head h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.side-insert-head h5 {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 80%;
+}
+
+.side-issue-container {
+  position: relative;
+  top: 50px;
+  height: 375px;
+  width: 100%;
+  background-color: rgba(175, 238, 238, 0.5);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  gap: 1rem;
+  padding-top: 58px;
+  padding-bottom: 20px;
+  overflow-y: scroll;
+}
+
+.single-issue {
+  position: relative;
+  left: 10px;
+  background: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  width: 85%;
+  text-align: left;
+  padding: 5px;
+  display: flex;
+  transition: box-shadow 0.4s;
+  overflow-y: scroll;
+}
+
+.single-issue h5 {
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+.single-issue p {
+  font-size: 14px;
+  font-weight: 400;
+  position: relative;
+  top: 5px;
+  padding-left: 15px;
+}
+
+.single-issue img {
+  height: 25px;
+}
+
+.issue-links {
+  margin-left: auto;
+  margin-right: 0;
+  display: flex;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.sidebar-insertbtn {
+  background-color: #fff;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  font-size: 20px;
+  width: 70px;
+  padding: 5px;
+  position: absolute;
+  left: 20px;
+  top: 100px;
+}
+
+.sidebar-insertbtn:hover {
+  cursor: pointer;
+}
+
+/* FILTER BOX */
+.admin-control-filterbox {
+  position: absolute;
+  top: 270px;
+  left: 900px;
+  background-color: #fff;
+  height: 170px;
+  width: 230px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  display: block;
+  padding: 20px;
+  text-align: left;
+}
+
+.admin-control-filterbox select {
+  margin-top: 5px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 15px;
+  width: 85%;
+}
+
+.admin-control-filterbox select option {
+  color: black;
+}
+
+.admin-control-filterbox .dropDown {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-control-filterbox button {
+  position: absolute;
+  right: 30px;
+  background: none;
+  border: none;
+}
+
+.admin-control-filterbox button:hover {
+  cursor: pointer;
+}
+
+.admin-control-filterbox img {
+  height: 15px;
+}

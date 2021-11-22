@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  /*background-image: url("/login-bg-01.png");*/
+  font-family: lato, arial;
+}
+
+.logInFormContainer {
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 450px;
+  box-shadow: 4px 4px 10px 3px rgba(0, 0, 0, 0.6);
+}
+
+.logInForm {
+  margin: 25px;
+}
+
+.logInForm label {
+  opacity: 0.8;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.logInForm input {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+.labelBar {
+  border: none;
+  margin-top: 25px;
+  background-color: #0b75d0;
+  color: white;
+  position: absolute;
+  top: 350px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  padding: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+  transition: top 0.5s, width 0.7s, border-radius 0.5s, box-shadow 0.3s;
+}
+
+button h6 {
+  font-size: 25px;
+  font-weight: 700;
+  position: relative;
+}
+
+.loginBody {
+  background-image: url("/design//login-bg-01.png");
+  height: 100%;
+}
+
+.login-info {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+  gap: 20px;
+}
+
+.login-image img {
+  height: 100px;
+}
+
+.login-info .login-about {
+  width: 150px;
+}
+
+.labelBar:hover {
+  cursor: pointer;
+  width: 105%;
+  top: 340px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.6);
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}

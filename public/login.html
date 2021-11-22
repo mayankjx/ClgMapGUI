@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Log in page</title>
+  </head>
+  <body>
+    <div class="loginBody">
+      <div class="logInFormContainer">
+        <div class="login-info">
+          <div class="login-image">
+            <img src="design/admin(5).png" />
+          </div>
+          <div class="login-about">
+            <h3>Admin controls Login</h3>
+          </div>
+        </div>
+        <form action="/login" method="POST" class="logInForm">
+          <label for="username">Username</label><br />
+          <input type="text" name="username" /><br />
+          <label for="password">Password</label><br />
+          <input type="password" name="password" />
+          <button type="submit" class="labelBar"><h6>Login</h6></button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!--Logo import link-->
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js"></script>
+    <!--CSS-->
+
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <title>GUI College Map</title>
+  </head>
+
+  <body>
+    <div id="mapContainer"></div>
+    <div class="sidebar">
+      <ul class="nav_list">
+        <li>
+          <button type="button" class="searchBtn"></button>
+          <!--<i class="bx bx-search"></i>-->
+          <!--<span class="item_name">Search</span>-->
+          <span class="tooltip">Search</span>
+        </li>
+        <li>
+          <button type="button" class="navBtn"></button>
+          <!--<i class="bx bxs-navigation"></i>-->
+          <!--<span class="item_name">Options</span>-->
+          <span class="tooltip">Options</span>
+        </li>
+        <li>
+          <button type="button" class="raiseBtn"></button>
+          <!--<i class="bx bx-note"></i>-->
+          <!--<span class="item_name">Raise an issue</span>-->
+          <span class="tooltip">Raise</span>
+        </li>
+        <li>
+          <button type="button" class="adminBtn"></button>
+          <span class="tooltip">Admin Control</span>
+        </li>
+      </ul>
+    </div>
+    <!-----Sidebar 1----->
+    <div class="sidebar--1 hidden">
+      <button type="button" class="close-search"></button>
+      <h2 class="sidebarHead">IIITDM Jabalpur</h2>
+      <p class="sidebarSubHead">All locations</p>
+      <div class="markerRadioSearch-container">
+        <input type="radio" value="academic" name="markerRadioSearch" />
+        <label>Academic buildings</label>
+        <input type="radio" value="non-academic" name="markerRadioSearch" />
+        <label>Non-Academic buildings</label><br />
+        <input
+          type="radio"
+          value="point of interest"
+          name="markerRadioSearch"
+        />
+        <!--POI : POINT OF INTEREst-->
+        <label>Point of Interest</label>
+        <input
+          type="radio"
+          value="hall of residence"
+          name="markerRadioSearch"
+        />
+        <label>Hall of residence</label>
+        <input type="radio" value="others" name="markerRadioSearch" />
+        <label>Other buildings and facilities</label>
+      </div>
+      <hr size="2" color="white" />
+      <div class="controlBtn" id="showAll">
+        <img src="design/show.png" />
+        <p>Show all</p>
+      </div>
+
+      <div class="controlBtn" id="hideAll">
+        <img src="design/hide.png" />
+        <p>Hide all</p>
+      </div>
+      <br />
+      <button type="button" class="resetBtn">Reset</button>
+    </div>
+    <!-----Sidebar 2----->
+    <div class="sidebar--2 hidden">
+      <button type="button" class="close-nav"></button>
+      <h2 class="sidebarHead">Specific search</h2>
+      <label>Category</label><br />
+      <div class="dropDown">
+        <select class="dropdownListCategory">
+          <option value="commonSearch">Common Searches</option>
+          <option value="Academic">Academic Buildings</option>
+          <option value="Non-Academic">Non-Academic Buildings</option>
+          <option value="Hall of Residence 	">Residence Halls</option>
+          <option value="Facilities">Other buildings and Facilities</option>
+          <option value="Point of Interest">Points of Interest</option>
+        </select>
+      </div>
+      <hr size="2" color="white" />
+      <label>Department</label><br />
+      <div class="dropDown">
+        <select class="dropdownListDepartment">
+          <option value="G.Admin">General Administration</option>
+          <option value="CSE">Computer Science</option>
+          <option value="ECE">Electronics and Communitcation</option>
+          <option value="ME">Mechanical</option>
+          <option value="SM">Smart Manufacturing</option>
+          <option value="Des">Design</option>
+          <option value="NS">Natural Science</option>
+        </select>
+      </div>
+      <hr size="2" color="white" />
+      <label>Name</label>
+      <div class="searchBar">
+        <input type="text" class="searchBox" placeholder="Search here..." />
+        <button type="button" class="specificSearchBtn searchByName" id="name">
+          Search
+        </button>
+      </div>
+    </div>
+    <!-----Sidebar 3----->
+    <div class="sidebar--3 hidden">
+      <button type="button" class="close-raise"></button>
+      <h2 class="sidebarHead">Raise an Issue</h2>
+      <p class="sidebarSubHead">Enter your issue below</p>
+      <textarea class="issueBox" rows="5" cols="55"> </textarea><br />
+      <button type="button" class="raiseIssueBtn">Sumbit</button><br />
+      <h5>Submit request successful</h5>
+    </div>
+
+    <!-----Sidebar 4----->
+    <div class="sidebar--4 hidden">
+      <button type="button" class="close-btn"></button>
+      <h2 class="sidebarHead">Raise an Issue</h2>
+      <p class="sidebarSubHead">Enter your issue below</p>
+      <textarea class="issueBox" rows="5" cols="25"> </textarea>
+      <button type="button" class="raiseIssueBtn">Sumbit</button>
+    </div>
+
+    <!--InfoBox-->
+    <div class="infoBox hidden">
+      <button type="button" class="close-info"></button>
+      <h2 class="markerName"></h2>
+      <h3 class="markerCategory"></h3>
+      <button type="button" class="infoBoxBtn" value="id">
+        More information
+      </button>
+    </div>
+
+    <!--Full info box popup-->
+    <div class="fullInfo hidden">
+      <button type="button" class="close-fullInfo"></button>
+      <div class="locImg">
+        <img src="" />
+      </div>
+      <h2 class="locName">Name</h2>
+      <h4 class="locCategory">Category</h4>
+      <h4 class="locRestrict">Restrictions</h4>
+      <h4 class="locDept">Department</h4>
+      <div class="fullInfoDesc">
+        <p>
+          All the information about the marker goes here please keep calm and
+          wait for the information to arrive....
+        </p>
+      </div>
+    </div>
+
+    <script src="client-app.js"></script>
+    <script src="sidebar.js"></script>
+  </body>
+</html>

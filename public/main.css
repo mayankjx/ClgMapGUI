@@ -1,0 +1,531 @@
+/*Google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* DESIGNING HTML ELEMENTS */
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* STYLING DIVS */
+
+/* Full Information pop up*/
+
+.fullInfo {
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: #212121;
+  color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+  width: 30%;
+}
+
+.fullInfo .locImg {
+  display: flex;
+  justify-content: center;
+}
+
+.fullInfo .locImg img {
+  height: 450px;
+  object-fit: content;
+}
+
+.fullInfo .locName {
+  text-align: left;
+  opacity: 85%;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.fullInfo .locCategory {
+  text-align: left;
+  opacity: 80%;
+  font-size: 17px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.fullInfo .locDept {
+  text-align: left;
+  opacity: 60%;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fullInfo .locRestrict {
+  text-align: left;
+  opacity: 75%;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 3px;
+}
+
+.fullInfo .fullInfoDesc {
+  text-align: left;
+  font-weight: 300;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.fullInfo .close-fullInfo {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  background: url("design/close.png");
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+.fullInfo .close-fullInfo:hover {
+  cursor: pointer;
+}
+
+/* INFO BOX */
+.infoBox {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #212121;
+  color: #fff;
+  padding: 15px;
+  top: 380px;
+  right: 40px;
+  width: 400px;
+}
+
+.infoBox h2 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+
+.infoBox h3 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.infoBox .infoBoxBtn {
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2069e0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+/* info Box close button */
+.infoBox .close-info {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  background: url("design/close.png");
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+
+/*MAP DIV*/
+#mapContainer {
+  position: absolute;
+  width: 100%;
+  height: 750px;
+}
+
+/*SIDEBAR DIV*/
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 5%;
+  background: #181818;
+  padding: 6px 14px;
+}
+
+.sidebar ul {
+  margin-top: 20px;
+}
+
+.sidebar ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.sidebar ul li .searchBtn {
+  background: url("design/search.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.sidebar ul li .navBtn {
+  background: url("design/Navigation.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.sidebar ul li .raiseBtn {
+  background: url("design/raise.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.sidebar ul li .adminBtn {
+  background: url("design/admin.png");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 30px;
+  top: 30%;
+  transform: translateY(-50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 150px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #11101d;
+  line-height: 35px;
+  text-align: center;
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*SIDEBAR POP-UPS*/
+
+/* Sidebar--1 */
+.sidebar--1 {
+  position: absolute;
+  top: 5px;
+  left: 77px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #212121;
+  width: 30%;
+  color: whitesmoke;
+  font-weight: 200;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.sidebar--1 .sidebarHead {
+  font-weight: 600;
+  font-size: 40px;
+  color: #5e91f2;
+  padding-top: 10px;
+}
+
+.sidebar--1 .sidebarSubHead {
+  font-weight: 400;
+  font-size: 20px;
+  color: #92b8ff;
+  padding-bottom: 20px;
+}
+
+.sidebar--1 input {
+  margin-top: 10px;
+  padding: 3px;
+  margin-right: 3px;
+}
+
+.sidebar--1 input,
+.sidebar--1 label {
+  vertical-align: baseline;
+}
+
+.sidebar--1 hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.markerRadioSearch-container {
+}
+
+.sidebar--1 .close-search {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  background: url("design/close.png");
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+
+.controlBtn {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#hideAll {
+  margin-left: 10px;
+}
+
+.controlBtn img {
+  height: 20px;
+  margin: 3px;
+}
+
+.controlBtn p {
+  display: inline-block;
+  position: relative;
+  top: -7px;
+  padding-left: 4px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.resetBtn {
+  position: relative;
+  margin-top: 15px;
+  margin-left: 150px;
+  padding: 7px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2069e0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+/* Sidebar--2 */
+.sidebar--2 {
+  position: absolute;
+  top: 80px;
+  left: 77px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #212121;
+  width: 35%;
+  color: whitesmoke;
+  font-weight: 200;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.sidebar--2 .sidebarHead {
+  font-weight: 600;
+  font-size: 40px;
+  color: #5e91f2;
+  padding-bottom: 5px;
+}
+
+.sidebar--2 .sidebarSubHead {
+  font-weight: 400;
+  font-size: 20px;
+  color: #92b8ff;
+  padding-bottom: 20px;
+}
+
+.sidebar--2 label {
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.sidebar--2 select {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  width: 60%;
+}
+
+.sidebar--2 select option {
+  color: black;
+}
+
+.sidebar--2 .dropDown {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar--2 hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.sidebar--2 .searchBar {
+  margin-bottom: 10px;
+}
+
+.sidebar--2 .searchBox {
+  margin-top: 10px;
+  margin-left: 5px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: white;
+  width: 59%;
+}
+
+.sidebar--2 .specificSearchBtn {
+  margin-left: 20px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2069e0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sidebar--2 .close-nav {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  background: url("design/close.png");
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+
+.sidebar--3 {
+  position: absolute;
+  top: 145px;
+  left: 77px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #212121;
+  width: 30%;
+  color: whitesmoke;
+  font-weight: 200;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+
+.sidebar--3 h5 {
+  position: relative;
+  top: 5px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.sidebar--3 .sidebarHead {
+  font-weight: 600;
+  font-size: 40px;
+  color: #5e91f2;
+  padding-top: 10px;
+}
+
+.sidebar--3 .issueBox {
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.sidebar--3 .close-raise {
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  background: url("design/close.png");
+  background-size: cover;
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+
+.sidebar--3 .raiseIssueBtn {
+  margin-top: 20px;
+  padding: 5px;
+  background-color: #fff;
+  color: #212121;
+  font-size: 15px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px 10px #444;
+}
+
+/* HOVER EFFECTS AND ANIMATIONS*/
+
+.sidebar--1 button:hover {
+  cursor: pointer;
+}
+
+.sidebar--1 .controlBtn:hover {
+  cursor: pointer;
+}
+
+.sidebar--2 button:hover {
+  cursor: pointer;
+}
+
+.sidebar--3 button:hover {
+  cursor: pointer;
+}
+
+.sidebar ul li button:hover {
+  cursor: pointer;
+}
+
+.infoBox button:hover {
+  cursor: pointer;
+}
+
+.mapboxgl-marker:hover {
+  cursor: pointer;
+}
+
+.sidebar ul li:hover .tooltip {
+  transition: all 0.5s ease;
+  opacity: 1;
+  left: 60px;
+}
+
+/*HIDDEN CLASS*/
+
+.hidden {
+  display: none;
+}
