@@ -35,7 +35,7 @@ const start = async () => {
         console.log(err);
       }
     });
-    app.listen(port, host, () => {
+    app.listen(port, () => {
       console.log(`Server is listening to port: ${port}`);
     });
   } catch (error) {
@@ -43,5 +43,28 @@ const start = async () => {
   }
 };
 
+function handleDisconnect(connection) {
+  connection.on("error", function (err) {
+    if (!err.fatal) {
+      return;
+    }
+
+    if (err.code !== "PROTOCOL_CONNECTION_LOST") {
+      throw err;
+    }
+
+    console.log("Re-connecting lost connection: " + err.stack);
+
+    connection = mysql.createConnection(connection.config);
+    handleDisconnect(connection);
+    connection.connect((err) => {
+      if (!err) {
+        console.log(`Database reconnected`);
+      }
+    });
+  });
+}
+
 // starting the server
+handleDisconnect(mysqlConnection);
 start();
