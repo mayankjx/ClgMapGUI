@@ -28,8 +28,8 @@ app.use("/admin", authorization, admin);
 // listening to port and connecting database
 const start = async () => {
   try {
-    mysqlConnection.connect((err) => {
-      if (!err) {
+    mysqlConnection.getConnection((err, connection) => {
+      if (connection) {
         console.log(`Database connected`);
       } else {
         console.log(err);
@@ -66,5 +66,4 @@ function handleDisconnect(connection) {
 }
 
 // starting the server
-handleDisconnect(mysqlConnection);
 start();
