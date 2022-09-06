@@ -1,4 +1,3 @@
-# ClgMapGUI
 # College Map GUI
 
 - This is a college map management system
